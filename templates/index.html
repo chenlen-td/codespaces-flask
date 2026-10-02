@@ -1,19 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-
+</head>
 <body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Flask
-            </p>
-            <p class="small">
-                Edit <code>templates/index.html</code> and refresh to see your changes!
-            </p>
+    <div class="page-shell">
+        <header class="hero">
+            <nav class="topbar">
+                <div class="brand">Alex</div>
+                <div class="nav-links">
+                    <a href="#about">關於我</a>
+                    <a href="#skills">技能</a>
+                    <a href="#contact">聯絡我</a>
+                </div>
+            </nav>
+
+            <section class="hero-content">
+                <div class="hero-copy">
+                    <p class="eyebrow">Hello, I'm Alex</p>
+                    <h1>喜歡用程式把想法變成作品。</h1>
+                    <p class="intro-text">
+                        我是一位熱愛學習與實作的開發者，專注於前端、Python 與網站開發，
+                        希望透過不斷嘗試與刻意練習，成為能解決問題的人。
+                    </p>
+                    <div class="cta-group">
+                        <a href="#contact" class="primary-btn">聯絡我</a>
+                        <a href="#about" class="secondary-btn">了解更多</a>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="{{ url_for('static', filename='Octocat.png') }}" alt="個人頭像" class="profile-image">
+                    <div class="profile-info">
+                        <h2>Alex Chen</h2>
+                        <p>Python / Web Developer</p>
+                    </div>
+                </div>
+            </section>
         </header>
+
+        <main>
+            <section id="about" class="info-panel">
+                <div class="section-title">
+                    <span>About Me</span>
+                    <h3>關於我</h3>
+                </div>
+                <div class="about-grid">
+                    <p>
+                        我喜歡從零到一的創作過程，從研究需求、設計介面到撰寫功能，
+                        都讓我感到很有成就感。對我來說，寫程式不只是工作，而是一種持續成長的方式。
+                    </p>
+                    <p>
+                        目前我正在學習 Python、Flask、前端設計與資料處理，
+                        也很重視程式碼的可讀性、使用者體驗與解決問題的思維。
+                    </p>
+                </div>
+            </section>
+
+            <section id="skills" class="info-panel">
+                <div class="section-title">
+                    <span>Skills</span>
+                    <h3>技能專長</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h4>Web</h4>
+                        <p>HTML / CSS / JavaScript / Flask</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Python</h4>
+                        <p>自動化腳本、資料處理、後端開發</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Design</h4>
+                        <p>使用者介面、版面配置、視覺優化</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-panel highlight-panel">
+                <div class="section-title">
+                    <span>Values</span>
+                    <h3>我的價值觀</h3>
+                </div>
+                <div class="value-list">
+                    <div>持續學習</div>
+                    <div>細心實作</div>
+                    <div>解決問題</div>
+                    <div>團隊合作</div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contact" class="footer">
+            <h3>Let's connect</h3>
+            <p>Email: alex@example.com</p>
+            <p>GitHub: github.com/alex</p>
+        </footer>
     </div>
 </body>
-
 </html>
